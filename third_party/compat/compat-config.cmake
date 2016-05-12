@@ -1,0 +1,5 @@
+if(NOT TARGET compat)
+  add_library(compat INTERFACE IMPORTED)
+  get_filename_component(CURRENT_LIST_PATH "${CMAKE_CURRENT_LIST_FILE}" PATH)
+  set_target_properties(compat PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${CURRENT_LIST_PATH}/include")
+endif()
